@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-height, initial-scale=1.0"/>
+    <title>Vampire Survivors Evolution Chart</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            color: lightgrey;
+            background-color: black;
+        }
+
+        a {
+            color: lightblue;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+        }
+
+        .lastupdate {
+            margin: 0.5em 0;
+        }
+
+        td.img {
+            position: relative;
+            width: 64px;
+            height: 64px;
+        }
+
+        td.symbol {
+            font-size: xx-large;
+        }
+
+        .icon,
+        .icon-bg {
+            image-rendering: pixelated;
+        }
+
+        .icon-bg {
+            width: 64px;
+            height: 64px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%) scale(3);
+        }
+
+    </style>
+</head>
+<body>
+<h1>
+    Vampire Survivors Evolution Chart
+</h1>
+
+<main>
+    <div class="container">
+        <div class="lastupdate">
+            <small>
+                Last updated 2022-02-20 for game version 0.2.13 &mdash; <a
+                    href="https://github.com/mld/vampire-survivors-evolution-chart">
+                Source
+            </a>
+                <br/>
+            </small>
+        </div>
+        <table>
+            <tbody></tbody>
+        </table>
+    </div>
+</main>
+
+<script>
+    const DATA = {
+        BloodyTear: ['Whip', 'HollowHeart'],
+        HeavenSword: ['Cross', 'Clover'],
+        DeathSpiral: ['Axe', 'Candelabrador'],
+        ThousandEdge: ['Knife', 'Bracer'],
+        Hellfire: ['FireWand', 'Spinach'],
+        HolyWand: ['MagicWand', 'EmptyTome'],
+        SoulEater: ['Garlic', 'Pummarola'],
+        Vandalier: ['Peachone', 'EbonyWings'],
+        UnholyVespers: ['KingBible', 'SpellBinder'],
+        Laborra: ['SantaWater', 'Attractorb'],
+        ThunderLoop: ['LightningRing', 'Duplicator'],
+    };
+
+    const $ = (e) => document.querySelector(e);
+    const chart = $('.container table tbody');
+    for (const [evolution, [weapon, passive]] of Object.entries(DATA)) {
+        const el = document.createElement('tr');
+        el.innerHTML = `
+<td class="img"><img class="icon-bg" src="img/bg.png"><img class="icon" src="img/${weapon}.png"></td>
+<td class="symbol">+</td>
+<td class="img"><img class="icon-bg" src="img/bg.png"><img class="icon" src="img/${passive}.png"></td>
+<td class="symbol">=</td>
+<td class="img"><img class="icon-bg" src="img/bg.png"><img class="icon" src="img/${evolution}.png"></td>
+`;
+        chart.append(el);
+    }
+</script>
+</body>
+</html>
