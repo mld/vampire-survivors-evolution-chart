@@ -65,6 +65,10 @@ const conversion = [
     {src: "items/LighningRing", dst: "LightningRing"},
     {src: "items/Ring", dst: "Duplicator"},
     {src: "items/Thunderloop", dst: "ThunderLoop"},
+
+    {src: "items/Song", dst: "SongOfMana"},
+    {src: "items/Curse", dst: "SkullOManiac"},
+    {src: "items/Song2", dst: "Mannajja"},
 ];
 
 console.log('Base path: ' + BASE_PATH);
