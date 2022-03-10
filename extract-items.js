@@ -1,5 +1,6 @@
 const sharp = require("sharp");
 const fs = require('fs');
+const lib = require('./lib');
 
 async function cropImage(source, destination, position) {
     try {
@@ -14,11 +15,8 @@ async function cropImage(source, destination, position) {
 // Get VS Assets path
 const VS_ASSETS_IMG = (process.env.VS_ASSETS_IMG || '.').split(/\ /).join('\ ');
 const BASE_PATH = (VS_ASSETS_IMG.endsWith('/') ? VS_ASSETS_IMG.slice(0, -1) : VS_ASSETS_IMG);
-const OUT_PATH = './extracted-icons';
-const resources = [
-    "items",
-    "UI"
-];
+
+const resources = lib.extract_resources;
 
 console.log('Base path: ' + BASE_PATH);
 
@@ -31,7 +29,7 @@ console.log("Extracting icons.");
 for (let set in resources) {
     const json = BASE_PATH + '/' + resources[set] + ".json";
     const png = BASE_PATH + '/' + resources[set] + ".png";
-    const out = OUT_PATH + '/' + resources[set];
+    const out = lib.extracted_icons + '/' + resources[set];
 
     if (!fs.existsSync(json) || !fs.existsSync(png)) {
         console.log("UI.json or UI.png are missing from " + BASE_PATH);

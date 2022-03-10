@@ -1,4 +1,25 @@
-const conversion = [
+const last_updated = "2022-03-10";
+const game_version = "0.3.1";
+const extracted_icons = './extracted-icons';
+const extract_resources = ['items', 'UI'];
+
+const evolutions = [
+    {evolution: "BloodyTear", weapon: "Whip", item: "HollowHeart"},
+    {evolution: "HeavenSword", weapon: "Cross", item: "Clover"},
+    {evolution: "DeathSpiral", weapon: "Axe", item: "Candelabrador"},
+    {evolution: "ThousandEdge", weapon: "Knife", item: "Bracer"},
+    {evolution: "Hellfire", weapon: "FireWand", item: "Spinach"},
+    {evolution: "HolyWand", weapon: "MagicWand", item: "EmptyTome"},
+    {evolution: "SoulEater", weapon: "Garlic", item: "Pummarola"},
+    {evolution: "Vandalier", weapon: "Peachone", item: "EbonyWings"},
+    {evolution: "UnholyVespers", weapon: "KingBible", item: "SpellBinder"},
+    {evolution: "LaBorra", weapon: "SantaWater", item: "Attractorb"},
+    {evolution: "ThunderLoop", weapon: "LightningRing", item: "Duplicator"},
+    {evolution: "Mannajja", weapon: "SongOfMana", item: "SkullOManiac"},
+    {evolution: "GorgeousMoon", weapon: "Pentagram", item: "Crown"}
+];
+
+const icons = [
     {src: "UI/frameB", dst: "bg"},
 
     {src: "items/Whip", dst: "Whip"},
@@ -54,4 +75,4 @@ const conversion = [
     {src: "items/Pentagram2", dst: "GorgeousMoon"},
 ];
 
-module.exports = conversion;
+module.exports = {last_updated, game_version, icons, evolutions, extracted_icons, extract_resources};

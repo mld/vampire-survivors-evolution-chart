@@ -6,10 +6,12 @@
   "scripts": {
     "extract": "node extract-items.js",
     "convert": "node convert-items.js",
-    "build": "npm run extract && npm run convert",
+    "build": "node build-index.js",
+    "all": "npm run extract && npm run convert && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "mustache": "^4.2.0",
     "sharp": "^0.30.1"
   }
 }

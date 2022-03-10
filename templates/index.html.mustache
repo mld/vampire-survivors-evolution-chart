@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-height, initial-scale=1.0"/>
+    <title>Vampire Survivors Evolution Chart</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            color: lightgrey;
+            background-color: black;
+        }
+
+        a {
+            color: lightblue;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+        }
+
+        .lastupdate {
+            margin: 0.5em 0;
+        }
+
+        td.img {
+            position: relative;
+            width: 64px;
+            height: 64px;
+        }
+
+        td.symbol {
+            font-size: xx-large;
+        }
+
+        .icon,
+        .icon-bg {
+            image-rendering: pixelated;
+        }
+
+        .icon-bg {
+            width: 64px;
+            height: 64px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%) scale(3);
+        }
+
+    </style>
+</head>
+<body>
+<h1>
+    Vampire Survivors Evolution Chart
+</h1>
+
+<main>
+    <div class="container">
+        <div class="lastupdate">
+            <small>
+                Last updated {{last_updated}} for game version {{game_version}} &mdash; <a
+                    href="https://github.com/mld/vampire-survivors-evolution-chart">
+                Source
+            </a>
+                <br/>
+            </small>
+        </div>
+        <table>
+            <tbody>
+            {{#evolutions}}
+                <tr>
+                    <td class="img">
+                        <img class="icon-bg" src="img/bg.png"><img class="icon" src="img/{{weapon}}.png">
+                    </td>
+                    <td class="symbol">+</td>
+                    <td class="img">
+                        <img class="icon-bg" src="img/bg.png"><img class="icon" src="img/{{item}}.png"></td>
+                    <td class="symbol">=</td>
+                    <td class="img">
+                        <img class="icon-bg" src="img/bg.png"><img class="icon" src="img/{{evolution}}.png">
+                    </td>
+                </tr>
+            {{/evolutions}}
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>
