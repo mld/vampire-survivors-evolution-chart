@@ -4,7 +4,9 @@
   "description": "Extract icons from items.json/items.png.",
   "main": "extraxt-items.js",
   "scripts": {
-    "build": "node extract-items.js",
+    "extract": "node extract-items.js",
+    "convert": "node convert-items.js",
+    "build": "npm run extract && npm run convert",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
