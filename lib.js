@@ -1,5 +1,5 @@
-const last_updated = "2022-03-10";
-const game_version = "0.3.1";
+const last_updated = "2022-03-20";
+const game_version = "0.3.1h";
 const extracted_icons = './extracted-icons';
 const extract_resources = ['items', 'UI'];
 
@@ -16,7 +16,8 @@ const evolutions = [
     {evolution: "LaBorra", weapon: "SantaWater", item: "Attractorb"},
     {evolution: "ThunderLoop", weapon: "LightningRing", item: "Duplicator"},
     {evolution: "Mannajja", weapon: "SongOfMana", item: "SkullOManiac"},
-    {evolution: "GorgeousMoon", weapon: "Pentagram", item: "Crown"}
+    {evolution: "GorgeousMoon", weapon: "Pentagram", item: "Crown"},
+    {evolution: "Phieraggi", weapon: "PhieraDerTuphello", weapon2: "EightTheSparrow", item: "Tiragisu"}
 ];
 
 const icons = [
@@ -73,6 +74,11 @@ const icons = [
     {src: "items/Pentagram", dst: "Pentagram"},
     {src: "items/Crown", dst: "Crown"},
     {src: "items/Pentagram2", dst: "GorgeousMoon"},
+
+    {src: "items/Guns", dst: "PhieraDerTuphello"},
+    {src: "items/Guns2", dst: "EightTheSparrow"},
+    {src: "items/Tiramisu", dst: "Tiragisu"},
+    {src: "items/Guns3", dst: "Phieraggi"},
 ];
 
 module.exports = {last_updated, game_version, icons, evolutions, extracted_icons, extract_resources};
