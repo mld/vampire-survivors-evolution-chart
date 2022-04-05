@@ -17,7 +17,8 @@ const evolutions = [
     {evolution: "ThunderLoop", weapon: "LightningRing", item: "Duplicator"},
     {evolution: "Mannajja", weapon: "SongOfMana", item: "SkullOManiac"},
     {evolution: "GorgeousMoon", weapon: "Pentagram", item: "Crown"},
-    {evolution: "Phieraggi", weapon: "PhieraDerTuphello", weapon2: "EightTheSparrow", item: "Tiragisu"}
+    {evolution: "Phieraggi", weapon: "PhieraDerTuphello", weapon2: "EightTheSparrow", item: "Tiragisu"},
+    {evolution: "NOFUTURE", weapon: "Runetracer", item: "Armor"}
 ];
 
 const icons = [
@@ -79,6 +80,10 @@ const icons = [
     {src: "items/Guns2", dst: "EightTheSparrow"},
     {src: "items/Tiramisu", dst: "Tiragisu"},
     {src: "items/Guns3", dst: "Phieraggi"},
+
+    {src: "items/Diamond2", dst: "Runetracer"},
+    {src: "items/ArmorIron", dst: "Armor"},
+    {src: "items/Carnage", dst: "NOFUTURE"},
 ];
 
 module.exports = {last_updated, game_version, icons, evolutions, extracted_icons, extract_resources};
