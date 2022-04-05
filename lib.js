@@ -1,5 +1,5 @@
-const last_updated = "2022-03-20";
-const game_version = "0.3.1h";
+const last_updated = "2022-04-05";
+const game_version = "0.4.0";
 const extracted_icons = './extracted-icons';
 const extract_resources = ['items', 'UI'];
 
