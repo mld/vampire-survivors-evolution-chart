@@ -1,5 +1,5 @@
-const last_updated = "2022-04-05";
-const game_version = "0.4.0";
+const last_updated = "2022-05-08";
+const game_version = "0.5.2";
 const extracted_icons = './extracted-icons';
 const extract_resources = ['items', 'UI'];
 
@@ -18,7 +18,9 @@ const evolutions = [
     {evolution: "Mannajja", weapon: "SongOfMana", item: "SkullOManiac"},
     {evolution: "GorgeousMoon", weapon: "Pentagram", item: "Crown"},
     {evolution: "Phieraggi", weapon: "PhieraDerTuphello", weapon2: "EightTheSparrow", item: "Tiragisu"},
-    {evolution: "NOFUTURE", weapon: "Runetracer", item: "Armor"}
+    {evolution: "NOFUTURE", weapon: "Runetracer", item: "Armor"},
+    {evolution: "ValkyrieTurner", weapon: "ShadowPinion", item: "Wings"},
+    {evolution: "ViciousHunger", weapon: "GattiAmori", item: "StoneMask"}
 ];
 
 const icons = [
@@ -84,6 +86,14 @@ const icons = [
     {src: "items/Diamond2", dst: "Runetracer"},
     {src: "items/ArmorIron", dst: "Armor"},
     {src: "items/Carnage", dst: "NOFUTURE"},
+
+    {src: "items/trapano", dst: "ShadowPinion"},
+    {src: "items/Wing", dst: "Wings"},
+    {src: "items/trapano2", dst: "ValkyrieTurner"},
+
+    {src: "items/Cat", dst: "GattiAmori"},
+    {src: "items/Mask", dst: "StoneMask"},
+    {src: "items/cateye", dst: "ViciousHunger"},
 ];
 
 module.exports = {last_updated, game_version, icons, evolutions, extracted_icons, extract_resources};
