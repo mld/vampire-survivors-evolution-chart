@@ -1,5 +1,5 @@
-const last_updated = "2022-05-08";
-const game_version = "0.5.2";
+const last_updated = "2022-05-24";
+const game_version = "0.6.1";
 const extracted_icons = './extracted-icons';
 const extract_resources = ['items', 'UI'];
 
@@ -20,7 +20,9 @@ const evolutions = [
     {evolution: "Phieraggi", weapon: "PhieraDerTuphello", weapon2: "EightTheSparrow", item: "Tiragisu"},
     {evolution: "NOFUTURE", weapon: "Runetracer", item: "Armor"},
     {evolution: "ValkyrieTurner", weapon: "ShadowPinion", item: "Wings"},
-    {evolution: "ViciousHunger", weapon: "GattiAmori", item: "StoneMask"}
+    {evolution: "ViciousHunger", weapon: "GattiAmori", item: "StoneMask"},
+    {evolution: "InfiniteCorridor", weapon: "ClockLancet", weapon2: "GoldRing", item: "SilverRing"},
+    {evolution: "CrimsonShroud", weapon: "Laurel", weapon2: "MetaglioLeft", item: "MetaglioRight"},
 ];
 
 const icons = [
@@ -94,6 +96,16 @@ const icons = [
     {src: "items/Cat", dst: "GattiAmori"},
     {src: "items/Mask", dst: "StoneMask"},
     {src: "items/cateye", dst: "ViciousHunger"},
+
+    {src: "items/Lancet", dst: "ClockLancet"},
+    {src: "items/goldring", dst: "GoldRing"},
+    {src: "items/silverring", dst: "SilverRing"},
+    {src: "items/portal", dst: "InfiniteCorridor"},
+
+    {src: "items/bsleft", dst: "MetaglioLeft"},
+    {src: "items/bsright", dst: "MetaglioRight"},
+    {src: "items/Laurel", dst: "Laurel"},
+    {src: "items/cape", dst: "CrimsonShroud"},
 ];
 
 module.exports = {last_updated, game_version, icons, evolutions, extracted_icons, extract_resources};
