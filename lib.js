@@ -1,5 +1,5 @@
-const last_updated = "2022-05-24";
-const game_version = "0.6.1";
+const last_updated = "2022-06-10";
+const game_version = "0.7.2";
 const extracted_icons = './extracted-icons';
 const extract_resources = ['items', 'UI'];
 
@@ -23,6 +23,7 @@ const evolutions = [
     {evolution: "ViciousHunger", weapon: "GattiAmori", item: "StoneMask"},
     {evolution: "InfiniteCorridor", weapon: "ClockLancet", weapon2: "GoldRing", item: "SilverRing"},
     {evolution: "CrimsonShroud", weapon: "Laurel", weapon2: "MetaglioLeft", item: "MetaglioRight"},
+    {evolution: "Fuwalafuwaloo", weapon: "VentoSacro", item: "BloodyTear"},
 ];
 
 const icons = [
@@ -106,6 +107,9 @@ const icons = [
     {src: "items/bsright", dst: "MetaglioRight"},
     {src: "items/Laurel", dst: "Laurel"},
     {src: "items/cape", dst: "CrimsonShroud"},
+
+    {src: "items/Whip3", dst: "VentoSacro"},
+    {src: "items/Whip4", dst: "Fuwalafuwaloo"},
 ];
 
 module.exports = {last_updated, game_version, icons, evolutions, extracted_icons, extract_resources};
